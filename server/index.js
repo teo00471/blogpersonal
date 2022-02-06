@@ -3,7 +3,7 @@ const { response } = require('express');
 const express = require('express');
 
 var mysql = require('mysql');
-const PORT = process.env.PORT || '3000'
+const PORT = process.env.PORT || '4200'
 
 const app = express()
 
