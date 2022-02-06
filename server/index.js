@@ -6,9 +6,10 @@ var mysql = require('mysql');
 const PORT = process.env.PORT || '3000'
 
 const app = express()
+
 app.set('port', PORT)
 
-//const port = 3000
+
 
 
 
@@ -69,8 +70,8 @@ app.get('/insertar',(req,res)=>{
 })
 
 
-app.listen(port, ()=> {
-    console.log(`Api corriendo en el puerto ${port}`)
+app.listen(PORT, ()=> {
+    console.log(`Api corriendo en el puerto ${PORT}`)
 })
 
 
