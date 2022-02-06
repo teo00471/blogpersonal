@@ -2,11 +2,14 @@ const { response } = require('express');
 
 const express = require('express');
 
-var mysql = require('mysql')
+var mysql = require('mysql');
+const PORT = process.env.PORT || '3000'
 
 const app = express()
+app.set('port', PORT)
 
-const port = 3000
+//const port = 3000
+
 
 
 
