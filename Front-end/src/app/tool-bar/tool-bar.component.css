@@ -1,0 +1,72 @@
+
+
+@media only screen and (max-width: 1920px){
+
+  .mat-toolbar{
+    height: 70px;
+
+  }
+  #inputUser{
+    position: absolute;
+    display: flex;
+    top: 20px;
+    margin-right: 25%;
+    left: 72%;
+    height: 2.5%;
+  }
+
+  #inputPassword{
+    position: fixed;
+    display: flex;
+    top: 20px;
+    left: 83%;
+    margin-right: 20%;
+    height: 2.5%;
+  }
+  #buttonLogin{
+    position: fixed;
+    display: flex;
+    height: 30px;
+    top: 20px;
+    margin-right: 20%;
+    left: 95%;
+    background-color: azure;
+    min-width: 786;
+  }
+}
+
+@media only screen and (min-width: 700px){
+
+  .mat-toolbar{
+    height: 70px;
+
+  }
+  #inputUser{
+    position: absolute;
+    display: flex;
+    top: 20px;
+    margin-right: 25%;
+    left: 72%;
+    height: 2.5%;
+  }
+
+  #inputPassword{
+    position: fixed;
+    display: flex;
+    top: 20px;
+    left: 83%;
+    margin-right: 20%;
+    height: 2.5%;
+  }
+  #buttonLogin{
+    position: fixed;
+    display: flex;
+    height: 30px;
+    top: 20px;
+    margin-right: 20%;
+    left: 95%;
+    background-color: azure;
+    min-width: 786;
+  }
+}
+

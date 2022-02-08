@@ -1,9 +1,18 @@
 const { response } = require('express');
 
+const bodyParser = require("body-parser")
+
+
+// var request = require('request')
+
 const express = require('express');
 
 var mysql = require('mysql');
-const PORT = process.env.PORT || '4200'
+
+
+var http = require('http')
+
+const PORT = process.env.PORT || '3306'
 
 const app = express()
 
@@ -29,13 +38,6 @@ var dbconn = mysql.createConnection({
       console.log('Database connection successful');
     }
   });
-
-
-
-
-
-
-
 // const config = {
 //     host: 'l6glqt8gsx37y4hs.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
 //     user: 'b7ar714azfw9xpe4',
@@ -53,7 +55,7 @@ dbconn.connect(function(err){
   });
    
 
-app.get('/obtenerDatos', (req, res) => {
+app.get('/users', (req, res) => {
     dbconn.query('SELECT * FROM users', (error, result) => {
         if (error) throw error;
 
@@ -61,13 +63,27 @@ app.get('/obtenerDatos', (req, res) => {
     });
 });
 
-app.get('/api', (req, res)=>{
-    res.send('Hola, gay')
+
+
+
+app.post('/users', (req, res)=>
+{
+  dbconn.query('INSERT INTO users SET?', request.body, (error, result)  =>
+  {
+
+    res.status(201).send(`User added with ID: ${result.insertId}`)
+
+    
+
+  })
 })
 
-app.get('/insertar',(req,res)=>{
-    res.send('Esta api, nos permite insertar datos.')
-})
+
+
+
+
+
+
 
 
 app.listen(PORT, ()=> {
